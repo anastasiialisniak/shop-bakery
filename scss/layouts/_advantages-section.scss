@@ -1,0 +1,30 @@
+.advantages-section {
+  min-height: 62px;
+  padding: 16px 0;
+  background-color: var(--color-brand-normal);
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    min-height: auto;
+    display: block;
+    padding: 24px 0;
+  }
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.advantages-item {
+  color: var(--color-primary-light);
+  font-size: 20px;
+  font-weight: 300;
+}

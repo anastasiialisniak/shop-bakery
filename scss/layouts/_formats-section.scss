@@ -1,0 +1,29 @@
+.formats-title {
+  margin-bottom: 80px;
+}
+
+.formats-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.formats-list {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.formats-item {
+  flex: 1;
+  min-width: 0;
+}

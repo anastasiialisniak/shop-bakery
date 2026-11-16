@@ -1,0 +1,154 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 0;
+  background-color: var(--color-primary-dark);
+  background-image: url('../images/background-footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: '';
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 180px;
+    height: 120px;
+    left: 0;
+    background-image: url('../images/decor-bread-small.png');
+
+    @media screen and (max-width: 768px) {
+      width: 100px;
+      height: 90px;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      background-image: url('../images/decor-bread-small-mobile.png');
+    }
+  }
+
+  &::after {
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url('../images/decor-bread-large.png');
+
+    @media screen and (max-width: 768px) {
+      width: 85px;
+      height: 205px;
+      top: 0;
+      bottom: auto;
+      left: 0;
+      right: auto;
+      background-image: url('../images/decor-bread-large-mobile.png');
+    }
+  }
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.footer-logo {
+  flex-grow: 1;
+}
+
+.footer-menu {
+  flex-grow: 1;
+
+  li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+  gap: 20px;
+  font-style: normal;
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.address-list {
+  flex-grow: 1;
+
+  li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.address-info {
+  flex-grow: 1;
+
+  .address-link {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}
+
+.address-social {
+  display: flex;
+  gap: 16px;
+}
+
+.address-link {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-brand-normal);
+  }
+}
+
+.address-copyright {
+  font-size: 14px;
+  color: var(--color-secondary-dark);
+  margin-bottom: 0;
+}
+
+.address-icon {
+  fill: var(--color-primary-light);
+  transition: fill 0.3s ease;
+
+  &:hover {
+    fill: var(--color-brand-normal);
+  }
+}

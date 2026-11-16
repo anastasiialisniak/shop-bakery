@@ -1,0 +1,44 @@
+.chefs-title {
+  position: relative;
+  margin: 0 auto 80px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 24px;
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.chefs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+  }
+}
